@@ -20,20 +20,24 @@ This repository contains the source code for a project that implements a domain-
 project-root
 │── src
 │   �
+│   �
 │   ├── application
 │   │   ├── controllers
 │   │   │   ├── CustomerController.ts
 │   │   │   ├── OrderController.ts
+│   │   │   �
 │   │   │   �
 │   │   │   └── ProductController.ts
 │   │   ├── dtos
 │   │   │   ├── ComboDto.ts
 │   │   │   ├── CustomerDtos.ts
 │   │   │   �
+│   │   │   �
 │   │   │   ├── OrderDto.ts
 │   │   │   └── ProductDto.ts
 │   │   ├── routes
 │   │   │   ├── CustomerRoutes.ts
+│   │   │   �
 │   │   │   �
 │   │   │   ├── index.ts
 │   │   │   ├── OrderRoutes.ts
@@ -275,3 +279,23 @@ The workflow is triggered automatically on every push to any branch. Additionall
 ### Conditional Publishing
 
 The workflow includes a conditional step that checks if the current branch is `main`. If it is, the Docker image is published to GitHub Container Registry under the repository owner's profile.
+
+## Contributing
+
+We welcome contributions to this project. Please follow the guidelines below to contribute:
+
+1. Fork the repository.
+2. Create a new branch for your feature or bugfix.
+3. Make your changes and commit them with a clear and concise commit message.
+4. Push your changes to your forked repository.
+5. Create a pull request to the main repository.
+
+## Commit description
+
+- Use clear and descriptive commit messages.
+- Follow the conventional commit format: `type(scope): message`.
+- Example: `feat(auth): add user authentication`.
+
+## License
+
+This project is licensed under the MIT License. See the LICENSE file for more details.
