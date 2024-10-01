@@ -19,26 +19,18 @@ This repository contains the source code for a project that implements a domain-
 ```folder
 project-root
 │── src
-│   �
-│   �
 │   ├── application
 │   │   ├── controllers
 │   │   │   ├── CustomerController.ts
 │   │   │   ├── OrderController.ts
-│   │   │   �
-│   │   │   �
 │   │   │   └── ProductController.ts
 │   │   ├── dtos
 │   │   │   ├── ComboDto.ts
 │   │   │   ├── CustomerDtos.ts
-│   │   │   �
-│   │   │   �
 │   │   │   ├── OrderDto.ts
 │   │   │   └── ProductDto.ts
 │   │   ├── routes
 │   │   │   ├── CustomerRoutes.ts
-│   │   │   �
-│   │   │   �
 │   │   │   ├── index.ts
 │   │   │   ├── OrderRoutes.ts
 │   │   │   └── ProductRoutes.ts
@@ -282,6 +274,16 @@ The workflow includes a conditional step that checks if the current branch is `m
 
 ## Contributing
 
+Feel free to explore the code and make any necessary modifications to suit your needs.
+
+### Commit description
+
+Use the tags:
+
+feat: (new feature for the user, not a new feature for build script) fix: (bug fix for the user, not a fix to a build script) docs: (changes to the documentation) style: (formatting, missing semi colons, etc; no production code change) refactor: (refactoring production code, eg. renaming a variable) test: (adding missing tests, refactoring tests; no production code change) chore: (updating grunt tasks etc; no production code change)
+
+Ref.: [Semantic Commit Messages](https://gist.github.com/joshbuchea/6f47e86d2510bce28f8e7f42ae84c716#file-semantic-commit-messages-md)
+
 We welcome contributions to this project. Please follow the guidelines below to contribute:
 
 1. Fork the repository.
@@ -298,4 +300,4 @@ We welcome contributions to this project. Please follow the guidelines below to 
 
 ## License
 
-This project is licensed under the MIT License. See the LICENSE file for more details.
+This project is licensed under the MIT License. See the LICENSE file for more information.
