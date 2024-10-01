@@ -24,7 +24,13 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: '18.x'
+      
+      - name: Enable Corepack
+        run: corepack enable
 
+      - name: Install correct Yarn version
+        run: corepack yarn set version 4.3.1
+        
       - name: Install dependencies
         run: yarn install
 
