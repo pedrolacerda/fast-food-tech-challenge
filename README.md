@@ -19,18 +19,22 @@ This repository contains the source code for a project that implements a domain-
 ```folder
 project-root
 │── src
+│   �
 │   ├── application
 │   │   ├── controllers
 │   │   │   ├── CustomerController.ts
 │   │   │   ├── OrderController.ts
+│   │   │   �
 │   │   │   └── ProductController.ts
 │   │   ├── dtos
 │   │   │   ├── ComboDto.ts
 │   │   │   ├── CustomerDtos.ts
+│   │   │   �
 │   │   │   ├── OrderDto.ts
 │   │   │   └── ProductDto.ts
 │   │   ├── routes
 │   │   │   ├── CustomerRoutes.ts
+│   │   │   �
 │   │   │   ├── index.ts
 │   │   │   ├── OrderRoutes.ts
 │   │   │   └── ProductRoutes.ts
@@ -258,20 +262,16 @@ yarn test:cucumber
 ### Kubernetes infrastructure
 ![Kubernetes App and DB diagram](./public/K8S_diagram.png)
 
+## GitHub Actions Workflow
 
+### Purpose
 
-## Contributing
+The GitHub Actions workflow is designed to automate the process of building and publishing the Docker image for this repository. It ensures that the Docker image is built on every push to any branch and conditionally publishes it to GitHub Container Registry on merges to the `main` branch.
 
-Feel free to explore the code and make any necessary modifications to suit your needs.
+### Triggering the Workflow
 
-### Commit description
+The workflow is triggered automatically on every push to any branch. Additionally, it includes a conditional step that publishes the Docker image to GitHub Container Registry when changes are merged into the `main` branch.
 
-Use the tags:
+### Conditional Publishing
 
-feat: (new feature for the user, not a new feature for build script) fix: (bug fix for the user, not a fix to a build script) docs: (changes to the documentation) style: (formatting, missing semi colons, etc; no production code change) refactor: (refactoring production code, eg. renaming a variable) test: (adding missing tests, refactoring tests; no production code change) chore: (updating grunt tasks etc; no production code change)
-
-Ref.: [Semantic Commit Messages](https://gist.github.com/joshbuchea/6f47e86d2510bce28f8e7f42ae84c716#file-semantic-commit-messages-md)
-
-## License
-
-This project is licensed under the MIT License. See the LICENSE file for more information.
+The workflow includes a conditional step that checks if the current branch is `main`. If it is, the Docker image is published to GitHub Container Registry under the repository owner's profile.
