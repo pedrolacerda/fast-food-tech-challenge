@@ -3,11 +3,15 @@ name: Build and Publish Docker Image
 on:
   push:
     branches:
-      - '**'
+      - main
   pull_request:
     branches:
       - main
 
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: true
+  
 jobs:
   build:
     runs-on: ubuntu-latest
